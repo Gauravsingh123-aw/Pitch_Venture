@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Login from './components/login'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div  class="text-3xl font-bold underline">kledshflk</div>
-    </>
+    <div className='border w-full h-screen flex justify-center  content-center bg-slate-200'>
+      <Login/>
+    </div>
   )
 }
 
