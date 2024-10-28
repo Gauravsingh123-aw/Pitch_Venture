@@ -102,7 +102,7 @@ const Registration = () => {
             </button>
             <div className="text-[1.2rem] mt-4">
               Already have and account ?{" "}
-              <span className="text-textBlue ">login </span>
+              <span className="text-blue-600 ">login </span>
             </div>
           </div>
         </div>

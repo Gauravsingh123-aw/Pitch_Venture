@@ -2,46 +2,20 @@
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      headercolor: "#ff5733",
-      brandBlue: "#1e3a8a",
-      blue: "#1DA1F2",
-      gray: "gray",
-      white: "white",
-      lightGray: "#D1D5DB",
-      textBlue: "#1E40AF",
-    },
-    backgroundColor: {
-      bodyMain: "rgb(207 250 254)",
-      black: "black",
-      gray: "gray",
-      green: "green",
-      mainBackground: "#E2E8F0",
-      white: "#fff",
-    },
-    width: {
-      bodyWidth: "100%",
-    },
-    height: {
-      bodyHeight: "100vh",
-    },
-
-    extend: {},
     extend: {
-      colors:{
-        "primary-color":"var(--primary-color)",
-        "secondary-color":"var(--secondary-color)",
-        "button-color":"var(--button-color)",
-        "background-color":"var(--background-color)"
+      colors: {
+        "primary-color": "var(--primary-color)",
+        "secondary-color": "var(--secondary-color)",
+        "button-color": "var(--button-color)",
+        "background-color": "var(--background-color)",
       },
       fontSize: {
-        heading: '2.25rem',
+        heading: "2.25rem",
       },
-      margin:{
-        nav_space:'2rem',
+      margin: {
+        nav_space: "2rem",
       },
     },
   },
   plugins: [],
 };
-
