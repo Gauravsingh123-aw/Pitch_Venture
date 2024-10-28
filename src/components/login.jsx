@@ -19,7 +19,7 @@ function Login() {
  }
 
   return (
-    <div className="h-[35rem] w-[28rem] bg-white m-nav_space flex flex-col items-center gap-y-8 pt-8">
+    <div className="h-[35rem] w-[28rem] bg-white m-nav_space flex flex-col items-center gap-y-8 pt-8 shadow-md">
       <div className="text-left w-full pl-16 text-heading ">Log in</div>
       <input className="w-2/3 h-12  border-2 text-center " placeholder="Usersname" name="username" onChange={handleData}/>
 
