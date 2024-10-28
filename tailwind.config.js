@@ -32,6 +32,7 @@ export default {
         "primary-color":"var(--primary-color)",
         "secondary-color":"var(--secondary-color)",
         "button-color":"var(--button-color)",
+        "background-color":"var(--background-color)"
       },
       fontSize: {
         heading: '2.25rem',
