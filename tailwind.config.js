@@ -27,6 +27,19 @@ export default {
     },
 
     extend: {},
+    extend: {
+      colors:{
+        "primary-color":"var(--primary-color)",
+        "secondary-color":"var(--secondary-color)",
+        "button-color":"var(--button-color)",
+      },
+      fontSize: {
+        heading: '2.25rem',
+      },
+      margin:{
+        nav_space:'2rem',
+      },
+    },
   },
   plugins: [],
 };

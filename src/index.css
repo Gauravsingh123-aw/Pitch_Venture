@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --primary-color: #ec1717;
+  --secondary-color: #000;
+  --button-color:#028858;
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    
+
+}
