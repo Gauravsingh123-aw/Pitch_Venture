@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import Login from './components/login'
-import Navbar from './components/Navbar'
-import Top from './components/Top'
-import Forgot_Pass from './components/Forgot_Pass'
+import React, { Suspense } from 'react'
+const Login=React.lazy(()=>import ('./components/login'))
+const Navbar= React.lazy(()=>import('./components/Navbar')) 
+const Top=React.lazy(()=>import('./components/Top')) 
+const Forgot_Pass=React.lazy(()=>import('./components/Forgot_Pass')) 
+const Registration=React.lazy(()=>import('./components/Registration.jsx')) 
+const Home=React.lazy(()=>import('./components/Home'))
 import { Route,Routes } from 'react-router-dom'
 import './App.css'
-import Registration from './components/Registration';
 
 function App() {
 
@@ -13,11 +14,14 @@ function App() {
     <div className='border w-full h-screen flex flex-col   items-center bg-slate-200'>
       <Top/>
       <Navbar/>
+      <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path='/' element={<Login/>}/>
-        <Route path='/forgot_pass' element={<Forgot_Pass/>}/>
-        <Route path='/registration' element={<Registration></Registration>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='login' element={<Login/>}/>
+        <Route path='forgot_pass' element={<Forgot_Pass/>}/>
+        <Route path='registration' element={<Registration/>}/>
       </Routes>
+      </Suspense>
     
     </div>
   )
