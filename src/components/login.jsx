@@ -1,3 +1,4 @@
+import { debounce } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -6,12 +7,24 @@ function Login() {
     
  let [data,setData]=useState({})
 
- let handleData=(event)=>{
+ let handleChange=(event)=>{
         let name=event.target.name;
         let value=event.target.value;
         console.log(value)
         setData({...data,[name]:value})
  }
+
+ function debounce(fn,delay){
+  let timer;
+  return function(...args){
+    if(timer) clearTimeout(timer);
+    timer=setTimeout(() => {
+      handleChange(...args);
+    }, delay);
+  }
+ }
+
+ let handleData=debounce(handleChange,1000);
 
  let handleSubmit=(event)=>{
     event.preventDefault();
