@@ -15,6 +15,9 @@ export default {
       margin: {
         nav_space: "2rem",
       },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],
