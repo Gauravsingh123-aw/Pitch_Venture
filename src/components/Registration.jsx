@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 const Registration = () => {
   const [data,setData]=useState({});
   const [error,setError]=useState(false)
@@ -8,10 +9,10 @@ const Registration = () => {
     console.log(data)
   }
   return (
-    <div className="w-full h-[39.5rem] bg-mainBackground">
+    <div className="w-full h-[50.5rem] bg-mainBackground font-roboto">
       <div className="flex items-center justify-center">
-        <div className="m-w-xl m-5 rounded hover:shadow-2xl shadow-lg bg-white  mt-20 pt-3  pl-10 pr-10 pb-4">
-          <h1 className="font-xl md:text-lg lg:text-3xl text-center  uppercase">
+        <div className="m-w-xl m-5 rounded hover:shadow-2xl shadow-lg bg-white   pt-3  pl-10 pr-10 pb-4">
+          <h1 className="font-xl md:text-lg lg:text-3xl text-center  ">
             Registration
           </h1>
           <div className="w-full  mt-5 text-center ">
@@ -95,14 +96,14 @@ const Registration = () => {
             </select>
             <br />
             <button
-              className="text-center hover:bg-black mt-6 text-white pl-12 pr-12  hover:text-gray bg-green h-12 text-xl p-1 w-2/3 rounded-md bg-button-color text-white border-2"
+              className="text-center hover:bg-black mt-6 text-white pl-12 pr-12  hover:text-gray bg-green h-12 text-xl p-1 w-2/3 rounded-md bg-button-color  border-2"
               onClick={onsubmit}
             >
               Register
             </button>
             <div className="text-[1.2rem] mt-4">
               Already have and account ?{" "}
-              <span className="text-blue-600 ">login </span>
+              <span className="text-blue-600 "><Link to='/login'>Login</Link></span>
             </div>
           </div>
         </div>
