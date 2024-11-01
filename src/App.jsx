@@ -6,6 +6,7 @@ import Forgot_Pass from './components/Forgot_Pass'
 import { Route,Routes } from 'react-router-dom'
 import './App.css'
 import Registration from './components/Registration';
+import Founder_details from './components/Founder_details'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Login/>}/>
         <Route path='/forgot_pass' element={<Forgot_Pass/>}/>
         <Route path='/registration' element={<Registration></Registration>}/>
+        <Route path='/founder_details' element={<Founder_details></Founder_details>}></Route>
       </Routes>
     
     </div>
