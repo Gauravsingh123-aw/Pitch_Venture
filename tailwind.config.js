@@ -17,6 +17,11 @@ export default {
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      blur: {
+        xs: '1px',
+        xl: '10px',
       },
     },
   },

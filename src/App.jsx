@@ -12,7 +12,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className='border w-full h-screen flex flex-col   items-center bg-slate-200'>
+    <div className='border w-full h-auto flex flex-col   items-center bg-slate-200'>
       <Top/>
       <Navbar/>
       <Suspense fallback={<div>Loading...</div>}>
