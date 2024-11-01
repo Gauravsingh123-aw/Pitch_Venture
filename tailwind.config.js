@@ -15,6 +15,14 @@ export default {
       margin: {
         nav_space: "2rem",
       },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      blur: {
+        xs: '1px',
+        xl: '10px',
+      },
     },
   },
   plugins: [],
