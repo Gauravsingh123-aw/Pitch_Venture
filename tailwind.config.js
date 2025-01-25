@@ -8,6 +8,8 @@ export default {
         "secondary-color": "var(--secondary-color)",
         "button-color": "var(--button-color)",
         "background-color": "var(--background-color)",
+        "footer":'#338778',
+        "footer_blue":"#131e32",
       },
       fontSize: {
         heading: "2.25rem",

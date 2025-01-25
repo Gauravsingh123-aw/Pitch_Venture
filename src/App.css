@@ -1,7 +1,14 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: center; */
 }
- */
+
+ .swiper-slide-active {
+  opacity: 1;
+}
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.4; /* Faded effect for previous and next slides */
+}

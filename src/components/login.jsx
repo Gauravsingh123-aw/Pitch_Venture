@@ -1,4 +1,3 @@
-import { debounce } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -32,7 +31,7 @@ function Login() {
  }
 
   return (
-    <div className="h-[27rem] w-[25rem] bg-white m-nav_space flex flex-col items-center gap-y-5 pt-6 shadow-md font-roboto rounded hover:shadow-2xl">
+    <div className="h-[25rem] w-[25rem] bg-white m-nav_space flex flex-col items-center gap-y-5 pt-6 shadow-md font-roboto rounded hover:shadow-2xl">
       <div className="text-left w-full pl-16 text-3xl ">Log in</div>
       <input className="w-2/3 h-12  border-2 text-center " placeholder="Usersname" name="username" onChange={handleData}/>
 
