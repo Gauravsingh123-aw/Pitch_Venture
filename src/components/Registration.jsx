@@ -9,7 +9,7 @@ const Registration = () => {
     console.log(data)
   }
   return (
-    <div className="w-full h-[50.5rem] bg-mainBackground font-roboto">
+    <div className="w-full  bg-mainBackground font-roboto">
       <div className="flex items-center justify-center">
         <div className="m-w-xl m-5 rounded hover:shadow-2xl shadow-lg bg-white   pt-3  pl-10 pr-10 pb-4">
           <h1 className="font-xl md:text-lg lg:text-3xl text-center  ">
@@ -51,7 +51,7 @@ const Registration = () => {
             <label htmlFor="phone-number">Phone number</label>
             <br /> */}
             <input
-              type="tel"
+              type="number"
               id="phone-number"
               placeholder="Enter Phone name"
               className="text-center  border border-lightGray p-2 text-sm"
@@ -82,6 +82,7 @@ const Registration = () => {
               name="type_of_user"
               id="type_of_user"
               className="mt-6 pr-10 pl-10 text-center text-gray text-lg pt-1 pb-1    border border-lightGray "
+              onChange={(e) => (data[e.target.name] = e.target.value)}
             >
               <option value="select" className="text-center">
                 {" "}

@@ -3,20 +3,54 @@ import { Link } from 'react-router-dom';
 import { FaLongArrowAltRight,FaBriefcaseMedical } from "react-icons/fa";
 import { GiCircuitry,GiTShirt,GiBookCover,GiArtificialIntelligence } from "react-icons/gi";
 import hero from '../assets/hero.png'
+import Partners_page from './Partners_page.jsx';
 const ProjCard_Home=React.lazy(()=>import('./ProjCard_Home.jsx'))
 const Testimonials=React.lazy(()=>import('./Testimonials.jsx'))
 
 
 export default function Home() {
     // dummy object for project card {later to be replaced }
-    let obj={
+    let obj=[
+        {
         img:"https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         project_head:"Self driving robot for shooting game cghghdfh ghgh",
         fundraised:'$43534',
         days_left:45,
         founder_name:'VV abit',
         field:"TECHNOLOGY"
-    };
+    },
+    {
+        img:"https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        project_head:"Self driving robot for shooting game cghghdfh ghgh",
+        fundraised:'$43534',
+        days_left:45,
+        founder_name:'VV abit',
+        field:"TECHNOLOGY"
+    },
+    {
+        img:"https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        project_head:"Self driving robot for shooting game cghghdfh ghgh",
+        fundraised:'$43534',
+        days_left:45,
+        founder_name:'VV abit',
+        field:"TECHNOLOGY"
+    },{
+        img:"https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        project_head:"Self driving robot for shooting game cghghdfh ghgh",
+        fundraised:'$43534',
+        days_left:45,
+        founder_name:'VV abit',
+        field:"TECHNOLOGY"
+    },{
+        img:"https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        project_head:"Self driving robot for shooting game cghghdfh ghgh",
+        fundraised:'$43534',
+        days_left:45,
+        founder_name:'VV abit',
+        field:"TECHNOLOGY"
+    }
+
+];
     // dummy obj for testimonial {to be replace later with API data}
     const testimonials = [
         {
@@ -85,14 +119,12 @@ export default function Home() {
                 <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, tempore!</div>
             </div>
             </div> 
-            <div className="flex flex-row flex-wrap justify-around">
+            <div className="flex flex-wrap flex-col  justify-around items-center lg:flex-row md:flex-row md:gap-4 sm:flex-col sm:items-center">
             <Suspense  fallback={<div>Loading..</div>} >
-            {elements.map((_,index)=>(
-                <ProjCard_Home props={obj} key={index}/>
-            ))}
+            <ProjCard_Home props={obj} limit={5}/>
             </Suspense>
             </div>
-
+            <Partners_page/>
             {/* adding testimonial section using carasouels. */}
             <div className='flex flex-col justify-center items-center mt-48 gap-4'>
             <div className='text-4xl font-bold text-slate-950'>Testimonials</div>

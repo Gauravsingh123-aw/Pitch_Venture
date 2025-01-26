@@ -8,31 +8,42 @@ const Home=React.lazy(()=>import('./components/Home'))
 const About_us=React.lazy(()=>import('./components/About_us.jsx'))
 const Investor_detail=lazy(()=>import('./components/Investor_detail.jsx'))
 const Footer=React.lazy(()=>import('./components/Footer.jsx'))
-import { Route,Routes } from 'react-router-dom'
+const Project_Search=React.lazy(()=>import('./components/Project_search.jsx'))
+import Spinner from './Spinner.jsx'
+import { Route,Routes,useLocation } from 'react-router-dom'
 import './App.css'
 import Founder_details from './components/Founder_details'
 
 function App() {
 
+  
+    const location = useLocation();
+  
+    const navbarBackgroundClass = location.pathname === '/' || location.pathname==="/login" || location.pathname==="/registration" ? 'home-bg-class' : 'other-bg-class';
+
   return (
     <div className='border w-lvw  min-h-screen flex flex-col   items-center bg-slate-200'>
-      <Top/>
-      <Navbar/>
-      <Suspense fallback={<div>Loading...</div>}>
+      
+      <Suspense fallback={<Spinner/>}>
+      <Top background={navbarBackgroundClass}/>
+        <Navbar background={navbarBackgroundClass} />
+      </Suspense>
+      <Suspense fallback={<Spinner/>}>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/forgot_pass' element={<Forgot_Pass/>}/>
-        <Route path='/registration' element={<Registration></Registration>}/>
-        <Route path='/founder_details' element={<Founder_details></Founder_details>}></Route>
+        <Route path='/registration' element={<Registration/>}/>
+        <Route path='/founder_details' element={<Founder_details/>}></Route>
         <Route path='/' element={<Home/>}/>
         <Route path='login' element={<Login/>}/>
         <Route path='forgot_pass' element={<Forgot_Pass/>}/>
         <Route path='registration' element={<Registration/>}/>
         <Route path='investor_detail' element={<Investor_detail/>}/>
         <Route path='about_us' element={<About_us/>}/>
+        <Route path='project_search'  element={<Project_Search/>}/>
       </Routes>
       </Suspense>
-     <Suspense fallback={<div>Loading....</div>}><Footer/></Suspense>
+     <Suspense fallback={<Spinner/>}><Footer/></Suspense>
  
     
     </div>
