@@ -106,7 +106,7 @@ function Project_search() {
   return (
     <div className="w-full relative">
       <div
-        className="w-full  h-60 bg-cover bg-center "
+        className="w-full  h-40 bg-cover bg-center "
         style={{ backgroundImage: `url(${worldimg})` }}
       >
         <div className="w-full h-full bg-footer bg-opacity-85 overflow-hidden text-3xl text-white text-opacity-75 font-bold flex flex-col justify-center items-center  ">

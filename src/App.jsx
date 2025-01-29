@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 const Login=React.lazy(()=>import ('./components/login'))
 const Navbar= React.lazy(()=>import('./components/Navbar')) 
-const Top=React.lazy(()=>import('./components/Top')) 
 const Forgot_Pass=React.lazy(()=>import('./components/Forgot_Pass')) 
 const Registration=React.lazy(()=>import('./components/Registration.jsx')) 
 const Home=React.lazy(()=>import('./components/Home'))
@@ -9,6 +8,7 @@ const About_us=React.lazy(()=>import('./components/About_us.jsx'))
 const Investor_detail=lazy(()=>import('./components/Investor_detail.jsx'))
 const Footer=React.lazy(()=>import('./components/Footer.jsx'))
 const Project_Search=React.lazy(()=>import('./components/Project_search.jsx'))
+const Project_page=React.lazy(()=>import('./components/Project_page.jsx'))
 import Spinner from './Spinner.jsx'
 import { Route,Routes,useLocation } from 'react-router-dom'
 import './App.css'
@@ -19,13 +19,12 @@ function App() {
   
     const location = useLocation();
   
-    const navbarBackgroundClass = location.pathname === '/' || location.pathname==="/login" || location.pathname==="/registration" ? 'home-bg-class' : 'other-bg-class';
+    const navbarBackgroundClass = location.pathname === '/' || location.pathname==="/login" || location.pathname==="/registration" || location.pathname==="/project_page"? 'home-bg-class' : 'other-bg-class';
 
   return (
     <div className='border w-lvw  min-h-screen flex flex-col   items-center bg-slate-200'>
       
       <Suspense fallback={<Spinner/>}>
-      <Top background={navbarBackgroundClass}/>
         <Navbar background={navbarBackgroundClass} />
       </Suspense>
       <Suspense fallback={<Spinner/>}>
@@ -41,6 +40,7 @@ function App() {
         <Route path='investor_detail' element={<Investor_detail/>}/>
         <Route path='about_us' element={<About_us/>}/>
         <Route path='project_search'  element={<Project_Search/>}/>
+        <Route path='project_page' element={<Project_page/>}/>
       </Routes>
       </Suspense>
      <Suspense fallback={<Spinner/>}><Footer/></Suspense>

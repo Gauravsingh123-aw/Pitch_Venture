@@ -6,6 +6,7 @@ import hero from '../assets/hero.png'
 import Partners_page from './Partners_page.jsx';
 const ProjCard_Home=React.lazy(()=>import('./ProjCard_Home.jsx'))
 const Testimonials=React.lazy(()=>import('./Testimonials.jsx'))
+const Top=React.lazy(()=>import('./Top')) 
 
 
 export default function Home() {
@@ -77,6 +78,7 @@ export default function Home() {
     const elements=Array(5).fill(null);
     return (
         <div className='flex flex-col w-full h-auto font-roboto'>
+            <Top/>
         <div className='flex flex-row w-full '>
             <div className="w-2/3 mt-24 ml-9">
                 <span className='text-3xl text-green-600 p-4 pl-0'>-Pitch Venture</span>
