@@ -19,7 +19,7 @@ function App() {
   
     const location = useLocation();
   
-    const navbarBackgroundClass = location.pathname === '/' || location.pathname==="/login" || location.pathname==="/registration" || location.pathname==="/project_page"? 'home-bg-class' : 'other-bg-class';
+    const navbarBackgroundClass = location.pathname === '/'  || location.pathname==="/project_page"? 'home-bg-class' : 'other-bg-class';
 
   return (
     <div className='border w-lvw  min-h-screen flex flex-col   items-center bg-slate-200'>

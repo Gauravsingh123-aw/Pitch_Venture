@@ -14,7 +14,6 @@ export default function Navbar(prop) {
             <span>Contact Us</span>
             <span className=' text-orange-700 flex flex-row gap-2'><FcBusinessman className="mt-1"/>My account</span>
         </div>
-        {console.log(prop.background)}
     </div>
     </div>
   )
