@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Registration = () => {
   const [data, setData] = useState({});
+  const API_URL=import.meta.env.VITE_API_URL;
 
-  function onSubmit() {
-    console.log("Submitted:", data);
+    async function onSubmit() {
+      let ans=await axios.post(`${API_URL}users`);
+      console.log(ans.data)
   }
 
   function debounce() {

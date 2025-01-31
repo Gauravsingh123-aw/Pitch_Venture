@@ -7,7 +7,7 @@ function Login() {
   let handleChange = (event) => {
     let name = event.target.name;
     let value = event.target.value;
-    console.log(value);
+    // console.log(value);
     setData({ ...data, [name]: value });
   };
 
