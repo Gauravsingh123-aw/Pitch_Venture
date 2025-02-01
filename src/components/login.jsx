@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
   let [data, setData] = useState({});
@@ -45,9 +46,11 @@ function Login() {
     };
   }, []);
 
-  let handleSubmit = (event) => {
+  let handleSubmit =async (event) => {
     event.preventDefault();
-    console.log(data);
+    const API_URL=import.meta.env.VITE_API_URL;
+    let response=await axios.post(`${API_URL}user-api/user_login`,{data})
+    console.log(response.data)
   };
 
   return (

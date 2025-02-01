@@ -14,7 +14,7 @@ function ProjCard_Home({props,limit}) {
   return (
     <div className=" w-full  flex flex-row flex-wrap gap-4 px-8  pb-2  mt-8 justify-around ">
       {itemsToDisplay.map((ele,key) => (
-        <div className="w-1/2 lg:w-1/6 md:w-1/3 md: flex flex-col flex-wrap gap-4 shadow-lg   pb-2  mt-8 hover:shadow-2xl rounded-lg">
+        <div key={key} className="w-1/2 lg:w-1/6 md:w-1/3 md: flex flex-col flex-wrap gap-4 shadow-lg   pb-2  mt-8 hover:shadow-2xl rounded-lg">
           <img
             src={ele.img}
             className="h-28 w-1/1  overflow-hidden rounded-t-md"

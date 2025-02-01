@@ -7,7 +7,7 @@ const Registration = () => {
   const API_URL=import.meta.env.VITE_API_URL;
 
     async function onSubmit() {
-      let ans=await axios.post(`${API_URL}users`);
+      let ans=await axios.post(`${API_URL}user-api/user_reg`,{data});
       console.log(ans.data)
   }
 
@@ -59,14 +59,14 @@ const Registration = () => {
           <div className="flex gap-4">
             <input
               type="text"
-              name="firstname"
+              name="first_name"
               placeholder="First Name"
               className="w-1/2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               onChange={handleData}
             />
             <input
               type="text"
-              name="lastname"
+              name="last_name"
               placeholder="Last Name"
               className="w-1/2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               onChange={handleData}
@@ -83,7 +83,7 @@ const Registration = () => {
 
           <input
             type="number"
-            name="phonenumber"
+            name="phone"
             placeholder="Phone Number"
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={handleData}
@@ -91,7 +91,7 @@ const Registration = () => {
 
           <input
             type="text"
-            name="userid"
+            name="username"
             placeholder="Username"
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={handleData}
@@ -106,7 +106,7 @@ const Registration = () => {
           />
 
           <select
-            name="type_of_user"
+            name="user_type"
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={handleData}
           >
