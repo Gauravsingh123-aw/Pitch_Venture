@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useDispatch,useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import {userLoginLifeCycle} from '../redux/slices/userLoginSlice.js'
 
 function Login() {
+  let {currentUser,loginStatus,isPending,errorMessage}=useSelector(state=>state.userLogin)
   let [data, setData] = useState({});
+  let dispatch=useDispatch();
+  let navigate=useNavigate();
 
   let handleChange = (event) => {
     let name = event.target.name;
@@ -46,11 +52,15 @@ function Login() {
     };
   }, []);
 
-  let handleSubmit =async (event) => {
+  let handleSubmit = async (event) => {
     event.preventDefault();
-    const API_URL=import.meta.env.VITE_API_URL;
-    let response=await axios.post(`${API_URL}user-api/user_login`,{data})
-    console.log(response.data)
+    // const API_URL=import.meta.env.VITE_API_URL;
+    // let response=await axios.post(`${API_URL}user-api/user_login`,{data})
+    // console.log(response)
+    dispatch(userLoginLifeCycle(data))
+    if(loginStatus===true){
+      navigate('/t')
+    }
   };
 
   return (
