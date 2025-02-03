@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { FaLongArrowAltRight,FaBriefcaseMedical } from "react-icons/fa";
 import { GiCircuitry,GiTShirt,GiBookCover,GiArtificialIntelligence } from "react-icons/gi";
@@ -78,7 +78,7 @@ export default function Home() {
     const elements=Array(5).fill(null);
     return (
         <div className='flex flex-col w-full h-auto font-roboto'>
-            <Top/>
+         <Top/>
         <div className='flex flex-row w-full '>
             <div className="w-2/3 mt-24 ml-9">
                 <span className='text-3xl text-green-600 p-4 pl-0'>-Pitch Venture</span>

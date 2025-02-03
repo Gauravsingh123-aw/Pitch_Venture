@@ -11,6 +11,11 @@ function Login() {
   let dispatch=useDispatch();
   let navigate=useNavigate();
 
+  useEffect(()=>{
+    if(loginStatus===true)
+      navigate('/')
+  },[loginStatus])
+
   let handleChange = (event) => {
     let name = event.target.name;
     let value = event.target.value;
@@ -58,9 +63,7 @@ function Login() {
     // let response=await axios.post(`${API_URL}user-api/user_login`,{data})
     // console.log(response)
     dispatch(userLoginLifeCycle(data))
-    if(loginStatus===true){
-      navigate('/t')
-    }
+    
   };
 
   return (
