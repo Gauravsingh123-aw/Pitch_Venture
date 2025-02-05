@@ -1,6 +1,18 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useSelector,useDispatch } from "react-redux";
+import { startupLifecycle } from "../redux/slices/startupSlice";
 
 function Your_startups() {
+
+  let {detail}=useSelector(state=>state.startupDetail);
+  let {currentUser}=useSelector(state=>state.userLogin);
+  let dispatch=useDispatch();
+
+  useEffect(()=>{
+    dispatch(startupLifecycle(currentUser.username))
+  },[]);
+
   let [flag, setFlag] = useState(false);
   const [formData, setFormData] = useState({});
   const [teamMembers, setTeamMembers] = useState([
@@ -8,13 +20,13 @@ function Your_startups() {
   ]);
 
   const industries = [
-    "Technology",
-    "Medical",
-    "Business",
-    "Fashion",
-    "Research",
-    "Food",
-    "Manufacturing",
+    "technology",
+    "medical",
+    "business",
+    "fashion",
+    "research",
+    "food",
+    "manufacturing",
   ];
   const stages = ["Idea", "MVP", "Growth", "Scaling"];
   let [paymentInfo, setpayment] = useState({});
@@ -87,11 +99,16 @@ function Your_startups() {
     setFormData({ ...formData, paymentInfo });
 
     console.log("Form Submitted", formData);
+    sendApi();
   };
+
+  async function sendApi(){
+    const API_URL=import.meta.env.VITE_API_URL
+    let result= await axios.post(`${API_URL}startup-api/register_startup`,{formData})
+  }
 
   return (
     <div className="w-1/2 mt-16 bg-gray-50">
-      {/* {console.log(formData)} */}
       <header className="bg-gradient-to-r from-[#3da28c] to-[#4caf99] text-white py-10">
         <div className="max-w-7xl mx-auto px-8 text-center">
           <h1 className="text-5xl font-bold font-Kanit">Pitch Your Startup</h1>
@@ -100,7 +117,7 @@ function Your_startups() {
           </p>
         </div>
       </header>
-
+    {/* form */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex justify-center mb-8">
           <button
@@ -304,7 +321,7 @@ function Your_startups() {
               <div className="space-y-6">
                 <input
                   type="text"
-                  name="accountnumber"
+                  name="accountNumber"
                   placeholder="Account Number"
                   onChange={handlePayment}
                   className="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -341,6 +358,9 @@ function Your_startups() {
           </div>
         )}
       </div>
+
+      {/* list of startups with their startups */}
+
     </div>
   );
 }

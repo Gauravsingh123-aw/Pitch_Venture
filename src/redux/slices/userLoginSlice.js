@@ -3,10 +3,10 @@ import axios from "axios";
 
 export const userLoginLifeCycle=createAsyncThunk('user-Login',async (user,thunkApi)=>{
     try{
-        console.log(user)
+        // console.log(user)
         const API_URL=import.meta.env.VITE_API_URL;
         let response=await axios.post(`${API_URL}user-api/user_login`,user)
-        console.log(response)
+        // console.log(response)
         if(response.data.message==='login successful'){
             //saving the token in sessionstorage
             sessionStorage.setItem('token',response.data.token);
