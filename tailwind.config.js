@@ -20,6 +20,7 @@ export default {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        Kanit: ['Kanit', 'sans-serif'],
       },
       blur: {
         xs: '1px',

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Registration = () => {
   const [data, setData] = useState({});
@@ -9,6 +12,7 @@ const Registration = () => {
     async function onSubmit() {
       let ans=await axios.post(`${API_URL}user-api/user_reg`,{data});
       console.log(ans.data)
+      toast(ans.data.message);
   }
 
   function debounce() {
@@ -130,6 +134,18 @@ const Registration = () => {
           </p>
         </div>
       </div>
+      <ToastContainer 
+      className="toast-position"
+      position="top-right"
+      autoClose={2000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      />
     </div>
   );
 };

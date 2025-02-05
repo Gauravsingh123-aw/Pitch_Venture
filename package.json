@@ -21,6 +21,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.27.0",
     "react-toastify": "^10.0.6",
+    "recharts": "^2.15.1",
     "redux-thunk": "^3.1.0",
     "swiper": "^11.2.1",
     "three": "^0.169.0"

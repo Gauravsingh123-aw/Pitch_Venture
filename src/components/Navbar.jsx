@@ -17,14 +17,30 @@ export default function Navbar(prop) {
           <div className='w-full font-semibold flex flex-row flex-wrap justify-between pt-1  font-poppins' >
         <Link to='/' className='ml-8'><img src={logo} className='w-32 h-16'/></Link>
         <div className='w-1/2 flex flex-row flex-wrap mr-8 p-4 justify-between'>
-            <span><Link to="/">Home</Link></span>
+            {loginStatus==false && <><span><Link to="/">Home</Link></span>
             <span><Link to='/project_page'>About</Link></span>
             <span><Link to="/project_search">Projects</Link></span>
-            {/* <span>Contact Us</span> */}
-            {loginStatus==false ? <><span><Link to="/login">Login</Link></span>
-            <span><Link to="/registration">Register</Link></span></> :
-            <><span className='cursor-pointer' onClick={handleClick}>Logout</span>
-            <span className=' text-orange-700 flex flex-row gap-2 cursor-pointer'><FcBusinessman className="mt-1"/>{currentUser.username}</span></>}
+            <span><Link to="/login">Login</Link></span>
+            <span><Link to="/registration">Register</Link></span></> 
+            }
+            {(loginStatus==true && currentUser.user_type==='Investor') &&
+             <>
+             <span><Link to="/">Latest Startups</Link></span>
+              <span><Link to=''>Investment Portfolio</Link></span>
+              <span><Link to="">Messaging</Link></span>
+              <span><Link to="">Watchlist</Link></span>
+              <span className='cursor-pointer' onClick={handleClick}>Logout</span>
+             </>
+            }
+            {(loginStatus==true && currentUser.user_type==='startupFounder') &&
+                <>
+                <span><Link to="dashboard_founder">Dashboard</Link></span>
+                 <span><Link to='your_startups'>Your Startups</Link></span>
+                 <span><Link to="">Chats</Link></span>
+                 <span><Link to="">Stats</Link></span>
+                 <span className='cursor-pointer' onClick={handleClick}>Logout</span>
+                </>
+            }
         </div>
     </div>
     </div>
