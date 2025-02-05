@@ -5,14 +5,14 @@ export const startupLifecycle=createAsyncThunk('startup-detail',async(data,thunk
     try{
         const API_URL=import.meta.env.VITE_API_URL;
         let response=await axios.post(`${API_URL}startup-api/get_startupdata`,{data});
-        console.log(res,res.data);
-        if(res.data.message==="startup data found"){
+        console.log('response',response,response.data);
+        if(response.data.message==="startup data found"){
             
         }
         else{
             return thunkApi.rejectWithValue(response.data.message);
         }
-        return res.data;
+        return response.data;
     }
     catch(error){
         if (error.response) {

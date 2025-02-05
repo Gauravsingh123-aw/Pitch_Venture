@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector,useDispatch } from "react-redux";
 import { startupLifecycle } from "../redux/slices/startupSlice";
+import Card from "./Card.jsx";
 
 function Your_startups() {
 
@@ -108,6 +109,7 @@ function Your_startups() {
   }
 
   return (
+    <>
     <div className="w-1/2 mt-16 bg-gray-50">
       <header className="bg-gradient-to-r from-[#3da28c] to-[#4caf99] text-white py-10">
         <div className="max-w-7xl mx-auto px-8 text-center">
@@ -358,10 +360,13 @@ function Your_startups() {
           </div>
         )}
       </div>
+      </div>
+     
+      {/* {console.log('details',detail)} */}
+      <div className="w-full ">        { Object.keys(detail).length === 0 ? <div>asndl</div> : <Card data={detail.payload[0]}/>  }
+      </div>
 
-      {/* list of startups with their startups */}
-
-    </div>
+        </>
   );
 }
 
