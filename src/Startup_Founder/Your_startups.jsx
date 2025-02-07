@@ -3,6 +3,7 @@ import axios from "axios";
 import { useSelector,useDispatch } from "react-redux";
 import { startupLifecycle } from "../redux/slices/startupSlice";
 import Card from "./Card.jsx";
+import Project_page from "../components/Project_page.jsx";
 
 function Your_startups() {
 
@@ -109,9 +110,9 @@ function Your_startups() {
   }
 
   return (
-    <>
-    <div className="w-1/2 mt-16 bg-gray-50">
-      <header className="bg-gradient-to-r from-[#3da28c] to-[#4caf99] text-white py-10">
+    <div className="w-full p-10 flex flex-col flex-wrap gap-5">
+    <div className="w-full bg-gray-50 rounded-lg">
+      <header className="bg-gradient-to-r from-[#3da28c] to-[#4caf99] text-white py-10 ">
         <div className="max-w-7xl mx-auto px-8 text-center">
           <h1 className="text-5xl font-bold font-Kanit">Pitch Your Startup</h1>
           <p className="mt-4 text-lg font-light">
@@ -120,7 +121,7 @@ function Your_startups() {
         </div>
       </header>
     {/* form */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-12 rounded-b-lg">
         <div className="flex justify-center mb-8">
           <button
             type="button"
@@ -361,12 +362,12 @@ function Your_startups() {
         )}
       </div>
       </div>
-     
-      {/* {console.log('details',detail)} */}
+     <div className="text-2xl font-Kanit font-semibold ">Registered Startups</div>
+      {/* Registered Startups */}
       <div className="w-full ">        { Object.keys(detail).length === 0 ? <div>asndl</div> : <Card data={detail.payload[0]}/>  }
       </div>
 
-        </>
+        </div>
   );
 }
 

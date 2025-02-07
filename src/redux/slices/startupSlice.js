@@ -5,7 +5,7 @@ export const startupLifecycle=createAsyncThunk('startup-detail',async(data,thunk
     try{
         const API_URL=import.meta.env.VITE_API_URL;
         let response=await axios.post(`${API_URL}startup-api/get_startupdata`,{data});
-        console.log('response',response,response.data);
+        // console.log('response',response,response.data);
         if(response.data.message==="startup data found"){
             
         }
