@@ -5,12 +5,16 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { clearState } from '../redux/slices/userLoginSlice';
+import { clearStartup } from '../redux/slices/startupSlice';
 export default function Navbar(prop) {
   let {loginStatus,currentUser}=useSelector(state=>state.userLogin)
   let dispatch=useDispatch()
   useEffect(()=>{},[loginStatus])
   function handleClick(){
     dispatch(clearState());
+    if(currentUser.user_type=='startupFounder'){
+        dispatch(clearStartup());
+    }
   }
   return (
     <div  className={prop.background==="home-bg-class"?'w-full border-gray-300 border-t':'w-full bg-footer bg-opacity-85'}>
@@ -25,7 +29,7 @@ export default function Navbar(prop) {
             }
             {(loginStatus==true && currentUser.user_type==='Investor') &&
              <>
-             <span><Link to="/">Latest Startups</Link></span>
+             <span><Link to="/project_search">Latest Startups</Link></span>
               <span><Link to=''>Investment Portfolio</Link></span>
               <span><Link to="">Messaging</Link></span>
               <span><Link to="">Watchlist</Link></span>

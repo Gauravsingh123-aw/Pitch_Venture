@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 const Registration = () => {
+  let navigate=useNavigate();
   const [data, setData] = useState({});
   const API_URL=import.meta.env.VITE_API_URL;
 
@@ -13,6 +15,10 @@ const Registration = () => {
       let ans=await axios.post(`${API_URL}user-api/user_reg`,{data});
       console.log(ans.data)
       toast(ans.data.message);
+      if(ans.data.message==="user created"){
+        console.log("hav")
+         navigate('/login')
+      }
   }
 
   function debounce() {

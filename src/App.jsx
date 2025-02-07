@@ -11,6 +11,7 @@ const Project_Search=React.lazy(()=>import('./components/Project_search.jsx'))
 const Project_page=React.lazy(()=>import('./components/Project_page.jsx'))
 const Dashboard=React.lazy(()=>import('./Startup_Founder/Dashboard.jsx'))
 const Your_startups=React.lazy(()=>import('./Startup_Founder/Your_startups.jsx'))
+const Investment_Portfolio=React.lazy(()=>import('./Investor/Investment_Portfolio.jsx'))
 import Spinner from './Spinner.jsx'
 import { Route,Routes,useLocation } from 'react-router-dom'
 import './App.css'
@@ -45,6 +46,7 @@ function App() {
         <Route path='project_page' element={<Project_page/>}/>
         <Route path='dashboard_founder' element={<Dashboard/>}/>
         <Route path='your_startups' element={<Your_startups/>}/>
+        <Route path="investment_portfolio" element={<Investment_Portfolio/>}/>
       </Routes>
       </Suspense>
      <Suspense fallback={<Spinner/>}><Footer/></Suspense>

@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useSelector,useDispatch } from "react-redux";
-import { startupLifecycle } from "../redux/slices/startupSlice";
+import { useSelector } from "react-redux";
 import Card from "./Card.jsx";
-import Project_page from "../components/Project_page.jsx";
+
 
 function Your_startups() {
 
   let {detail}=useSelector(state=>state.startupDetail);
-  let {currentUser}=useSelector(state=>state.userLogin);
-  let dispatch=useDispatch();
+  // let {currentUser}=useSelector(state=>state.userLogin);
 
-  useEffect(()=>{
-    dispatch(startupLifecycle(currentUser.username))
-  },[]);
 
   let [flag, setFlag] = useState(false);
   const [formData, setFormData] = useState({});

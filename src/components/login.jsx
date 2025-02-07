@@ -13,7 +13,10 @@ function Login() {
 
   useEffect(()=>{
     if(loginStatus===true)
-      navigate('/')
+    {
+      if(currentUser.user_type==="startupFounder") navigate('/dashboard_founder')
+        else navigate('/')
+    }
   },[loginStatus])
 
   let handleChange = (event) => {
@@ -81,6 +84,7 @@ function Login() {
           className="w-full border-2 h-12 text-center rounded-md"
           placeholder="Password"
           name="password"
+          type="password"
           onChange={handleData}
         />
         <div className="text-sm text-left mt-2 text-blue-600">

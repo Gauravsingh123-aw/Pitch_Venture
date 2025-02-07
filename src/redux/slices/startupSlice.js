@@ -37,7 +37,9 @@ const startupSlice=createSlice({
     name:"startup-detail",
     initialState:{detail:{}},
     reducers:{
-        
+        clearStartup:(state,action)=>{
+            state.detail={}
+        }
     },
     extraReducers:builder=>builder
     .addCase(startupLifecycle.pending,(state,action)=>{
@@ -53,4 +55,5 @@ const startupSlice=createSlice({
 })
 
 export default startupSlice.reducer
+export let {clearStartup}=startupSlice.actions
 
