@@ -30,10 +30,10 @@ export default function Navbar(prop) {
             {(loginStatus==true && currentUser.user_type==='Investor') &&
              <>
              <span><Link to="/project_search">Latest Startups</Link></span>
-              <span><Link to=''>Investment Portfolio</Link></span>
-              <span><Link to="">Messaging</Link></span>
+              <span><Link to='/investment_portfolio'>Investment Portfolio</Link></span>
               <span><Link to="">Watchlist</Link></span>
               <span className='cursor-pointer' onClick={handleClick}>Logout</span>
+              <span><Link to="investor_detail">Profile</Link></span>
              </>
             }
             {(loginStatus==true && currentUser.user_type==='startupFounder') &&
