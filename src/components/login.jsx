@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useDispatch,useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { clearState } from "../redux/slices/userLoginSlice.js";
 import {userLoginLifeCycle} from '../redux/slices/userLoginSlice.js'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
   let {currentUser,loginStatus,isPending,errorMessage}=useSelector(state=>state.userLogin)
@@ -17,7 +20,11 @@ function Login() {
       if(currentUser.user_type==="startupFounder") navigate('/dashboard_founder')
         else navigate('/')
     }
-  },[loginStatus])
+    else if(errorMessage){
+      toast(errorMessage)
+      dispatch(clearState())
+    }
+  },[loginStatus,errorMessage])
 
   let handleChange = (event) => {
     let name = event.target.name;
@@ -104,6 +111,18 @@ function Login() {
           Sign Up
         </Link>
       </div>
+       <ToastContainer 
+                    className="toast-position"
+                    position="top-right"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    />
     </div>
   );
 }
