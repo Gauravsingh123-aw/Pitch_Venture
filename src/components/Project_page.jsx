@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import project_banner from "../assets/project_Banner.jpg";
 import { RiCurrencyLine } from "react-icons/ri";
 import { FaCalendarDays } from "react-icons/fa6";
@@ -9,11 +10,16 @@ function Project_page() {
   const [collected, setCollected] = useState(600); // Example: 500 collected
   const goal = 1000; // Example goal: 1000
 
+  let location=useLocation();
+  const data=location.state ;
+
   // Calculate the completion percentage
   const percentage = Math.min((collected / goal) * 100, 100);
 
   return (
     <div className="w-full relative h-full">
+            {console.log(data)}
+
       <div
         className="w-full relative bg-center bg-cover h-32"
         style={{ backgroundImage: `url(${project_banner})` }}

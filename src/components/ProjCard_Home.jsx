@@ -2,11 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { RiCurrencyLine } from "react-icons/ri";
 import { FaCalendarDays } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 function ProjCard_Home({props,limit}) {
   const [collected, setCollected] = useState(600); // Example: 500 collected
   const goal = 1000; // Example goal: 1000
-
+  const navigate=useNavigate();
   // Calculate the completion percentage
   const percentage = Math.min((collected / goal) * 100, 100);
 
@@ -14,7 +15,7 @@ function ProjCard_Home({props,limit}) {
   return (
     <div className=" w-full  flex flex-row flex-wrap gap-4 px-8  pb-2  mt-8 justify-around ">
       {itemsToDisplay.map((ele,key) => (
-        <div key={key} className="w-1/2 lg:w-1/6 md:w-1/3 md: flex flex-col flex-wrap gap-4 shadow-lg   pb-2  mt-8 hover:shadow-2xl rounded-lg">
+        <div key={key} className="w-1/2 lg:w-1/6 md:w-1/3 md: flex flex-col flex-wrap gap-4 shadow-lg   pb-2  mt-8 hover:shadow-2xl rounded-lg cursor-pointer" onClick={()=>{navigate('/project_page',{state:ele})}}>
           <img
             src={ele.img}
             className="h-28 w-1/1  overflow-hidden rounded-t-md"

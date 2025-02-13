@@ -40,23 +40,29 @@ export default function InvestorDetail() {
   }, [flag, currentUser.username]);
 
   return (
-    <>
+    <div className="w-1/3">
       {flag === 1 ? <Investor_form /> :
-        <div className="max-w-sm rounded overflow-hidden shadow-lg p-6 bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-          <div className="font-bold text-2xl mb-4 text-center">Investor Details</div>
-          <div className="mb-4">
-            <p><span className="font-semibold">Username:</span> {userData.username}</p>
-            <p><span className="font-semibold">Investment Range:</span> {userData.investment_range}</p>
-            <p><span className="font-semibold">Investment Experience:</span> {userData.investmentExperience}</p>
-            <p><span className="font-semibold">Preferred Industry:</span> {userData.preferred_industry}</p>
-          </div>
-          <div className="font-bold text-xl mb-2 text-center">Payment Information</div>
-          <div>
-            <p><span className="font-semibold">Bank Name:</span> {userData.paymentInfo.bankName}</p>
-            <p><span className="font-semibold">Account Number:</span> {userData.paymentInfo.accountNumber}</p>
-            <p><span className="font-semibold">Location:</span> {userData.paymentInfo.location}</p>
-          </div>
-        </div>
+       <div className="max-w-full rounded overflow-hidden shadow-lg p-2 bg-[#338778] text-white mt-10">
+       <div className="text-center mb-2">
+         <h2 className="font-bold text-2xl mb-1">Investor Details</h2>
+         <div className="bg-white rounded-lg p-4 text-gray-900 font-mono">
+           <p className="mb-2 text-slate-500 text-lg"><span className="font-semibold text-slate-600">Username:</span> {userData.username}</p>
+           <p className="mb-2 text-slate-500 text-lg"><span className="font-semibold text-slate-600">Investment Range:</span> {userData.investment_range}</p>
+           <p className="mb-2 text-slate-500 text-lg"><span className="font-semibold text-slate-600">Investment Experience:</span> {userData.investmentExperience}</p>
+           <p className="mb-2 text-slate-500 text-lg"><span className="font-semibold text-slate-600">Preferred Industry:</span> {userData.preferred_industry}</p>
+         </div>
+       </div>
+       <div className="text-center">
+         <h3 className="font-bold text-xl mb-2">Payment Information</h3>
+         <div className="bg-white rounded-lg p-4 text-gray-900 font-mono">
+           <p className="mb-2"><span className="font-semibold">Bank Name:</span> {userData.paymentInfo.bankName}</p>
+           <p className="mb-2"><span className="font-semibold">Account Number:</span> {userData.paymentInfo.accountNumber}</p>
+           <p className="mb-2"><span className="font-semibold">Location:</span> {userData.paymentInfo.location}</p>
+         </div>
+       </div>
+     </div>
+     
+
       }
       <ToastContainer
         className="toast-position"
@@ -70,6 +76,6 @@ export default function InvestorDetail() {
         draggable
         pauseOnHover
       />
-    </>
+    </div>
   );
 }

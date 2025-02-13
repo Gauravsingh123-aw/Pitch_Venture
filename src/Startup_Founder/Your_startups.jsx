@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import Card from "./Card.jsx";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Your_startups() {
@@ -9,6 +11,7 @@ function Your_startups() {
   let {detail}=useSelector(state=>state.startupDetail);
   // let {currentUser}=useSelector(state=>state.userLogin);
 
+  useEffect(()=>{},[detail])
 
   let [flag, setFlag] = useState(false);
   const [formData, setFormData] = useState({});
@@ -101,7 +104,18 @@ function Your_startups() {
 
   async function sendApi(){
     const API_URL=import.meta.env.VITE_API_URL
+    try{
     let result= await axios.post(`${API_URL}startup-api/register_startup`,{formData})
+    if(result.data.message=="startup id exists"){
+      toast('startup id exists')
+    }
+    else if(result.data.message=="startup listed"){
+      toast('startup listed');
+    }
+    }
+    catch(err){
+      console.log(err)
+    }
   }
 
   return (
@@ -359,9 +373,20 @@ function Your_startups() {
       </div>
      <div className="text-2xl font-Kanit font-semibold ">Registered Startups</div>
       {/* Registered Startups */}
-      <div className="w-full ">        { Object.keys(detail).length === 0 ? <div>asndl</div> : <Card data={detail.payload[0]}/>  }
+      <div className="w-full ">        { Object.keys(detail).length === 0 ? <div>asndl</div> : <Card data={detail.payload}/>  }
       </div>
-
+        <ToastContainer 
+              className="toast-position"
+              position="top-right"
+              autoClose={2000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              />
         </div>
   );
 }
