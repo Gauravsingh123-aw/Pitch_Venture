@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import Card from "./Card.jsx";
+import { startupLifecycle } from "../redux/slices/startupSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -9,9 +10,15 @@ import 'react-toastify/dist/ReactToastify.css';
 function Your_startups() {
 
   let {detail}=useSelector(state=>state.startupDetail);
+    const { loginStatus ,currentUser} = useSelector(state => state.userLogin);
+  
+  let [temp,setTemp]=useState(false);
+  const dispatch=useDispatch();
   // let {currentUser}=useSelector(state=>state.userLogin);
 
-  useEffect(()=>{},[detail])
+  useEffect(()=>{
+            dispatch(startupLifecycle(currentUser.username))
+  },[temp])
 
   let [flag, setFlag] = useState(false);
   const [formData, setFormData] = useState({});
@@ -98,7 +105,7 @@ function Your_startups() {
     e.preventDefault();
     setFormData({ ...formData, paymentInfo });
 
-    console.log("Form Submitted", formData);
+    // console.log("Form Submitted", formData);
     sendApi();
   };
 
@@ -111,6 +118,8 @@ function Your_startups() {
     }
     else if(result.data.message=="startup listed"){
       toast('startup listed');
+      setFlag(false)
+      setTemp(true)
     }
     }
     catch(err){
