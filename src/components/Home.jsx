@@ -160,7 +160,7 @@ export default function Home() {
                         Discover a wide range of sectors to invest in, from cutting-edge technology to creative industries. Find your passion and make an impact.
                     </div>
                 </div>
-                <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+                <div className="flex flex-wrap justify-center gap-6 md:gap-12">
                     <div className="border-2 border-green-100 flex flex-col justify-center items-center p-6 h-48 w-48 rounded-xl shadow-md bg-white hover:shadow-lg transition-shadow">
                         <GiCircuitry className="w-16 h-16 text-green-600 mb-2" />
                         <span className="font-semibold text-lg">Technology</span>
@@ -173,10 +173,10 @@ export default function Home() {
                         <FaBriefcaseMedical className="w-16 h-16 text-red-600 mb-2" />
                         <span className="font-semibold text-lg">Healthcare</span>
                     </div>
-                    <div className="border-2 border-green-100 flex flex-col justify-center items-center p-6 h-48 w-48 rounded-xl shadow-md bg-white hover:shadow-lg transition-shadow">
+                    {/* <div className="border-2 border-green-100 flex flex-col justify-center items-center p-6 h-48 w-48 rounded-xl shadow-md bg-white hover:shadow-lg transition-shadow">
                         <GiTShirt className="w-16 h-16 text-pink-500 mb-2" />
                         <span className="font-semibold text-lg">Fashion</span>
-                    </div>
+                    </div> */}
                     <div className="border-2 border-green-100 flex flex-col justify-center items-center p-6 h-48 w-48 rounded-xl shadow-md bg-white hover:shadow-lg transition-shadow">
                         <GiArtificialIntelligence className="w-16 h-16 text-purple-600 mb-2" />
                         <span className="font-semibold text-lg">AI</span>

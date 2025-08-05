@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector,useDispatch } from "react-redux";
 import Card from "./Card.jsx";
+import Piechart from "./Piechart.jsx";
 import { startupLifecycle } from "../redux/slices/startupSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -380,10 +381,7 @@ function Your_startups() {
         )}
       </div>
       </div>
-     <div className="text-2xl font-Kanit font-semibold ">Registered Startups</div>
-      {/* Registered Startups */}
-      <div className="w-full ">        { Object.keys(detail).length === 0 ? <div>asndl</div> : <Card data={detail.payload}/>  }
-      </div>
+     
         <ToastContainer 
               className="toast-position"
               position="top-right"

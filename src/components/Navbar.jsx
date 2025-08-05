@@ -40,7 +40,7 @@ export default function Navbar(prop) {
           </>}
           {(loginStatus === true && currentUser.user_type === 'startupFounder') && <>
             <Link to="dashboard_founder" className="hover:text-green-700 transition-colors">Dashboard</Link>
-            <Link to='your_startups' className="hover:text-green-700 transition-colors">Your Startups</Link>
+            <Link to='your_startups' className="hover:text-green-700 transition-colors">Register Startup</Link>
             <Link to="" className="hover:text-green-700 transition-colors">Chats</Link>
             <Link to="" className="hover:text-green-700 transition-colors">Stats</Link>
             <span className="cursor-pointer hover:text-red-600 transition-colors" onClick={handleClick}>Logout</span>
