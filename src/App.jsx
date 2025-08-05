@@ -18,7 +18,7 @@ import { Route,Routes,useLocation } from 'react-router-dom'
 import './App.css'
 import Founder_details from './components/Founder_details'
 
-function App() {
+function App() {  
 
   
     const location = useLocation();

@@ -7,46 +7,46 @@ import { useEffect } from 'react';
 import { clearState } from '../redux/slices/userLoginSlice';
 import { clearStartup } from '../redux/slices/startupSlice';
 export default function Navbar(prop) {
-  let {loginStatus,currentUser}=useSelector(state=>state.userLogin)
-  let dispatch=useDispatch()
-  useEffect(()=>{},[loginStatus])
-  function handleClick(){
+  let { loginStatus, currentUser } = useSelector(state => state.userLogin);
+  let dispatch = useDispatch();
+  useEffect(() => { }, [loginStatus]);
+  function handleClick() {
     dispatch(clearState());
-    if(currentUser.user_type=='startupFounder'){
-        dispatch(clearStartup());
+    if (currentUser.user_type === 'startupFounder') {
+      dispatch(clearStartup());
     }
   }
   return (
-    <div  className={prop.background==="home-bg-class"?'w-full border-gray-300 border-t':'w-full bg-footer bg-opacity-85'}>
-          <div className='w-full font-semibold flex flex-row flex-wrap justify-between pt-1  font-poppins' >
-        <Link to='/' className='ml-8'><img src={logo} className='w-32 h-16'/></Link>
-        <div className='w-1/2 flex flex-row flex-wrap mr-8 p-4 justify-between'>
-            {loginStatus==false && <><span><Link to="/">Home</Link></span>
-            <span><Link to='/project_page'>About</Link></span>
-            <span><Link to="/project_search">Projects</Link></span>
-            <span><Link to="/login">Login</Link></span>
-            <span><Link to="/registration">Register</Link></span></> 
-            }
-            {(loginStatus==true && currentUser.user_type==='Investor') &&
-             <>
-             <span><Link to="/project_search">Latest Startups</Link></span>
-              <span><Link to='/investment_portfolio'>Investment Portfolio</Link></span>
-              <span><Link to="">Watchlist</Link></span>
-              <span className='cursor-pointer' onClick={handleClick}>Logout</span>
-              <span><Link to="investor_detail">Profile</Link></span>
-             </>
-            }
-            {(loginStatus==true && currentUser.user_type==='startupFounder') &&
-                <>
-                <span><Link to="dashboard_founder">Dashboard</Link></span>
-                 <span><Link to='your_startups'>Your Startups</Link></span>
-                 <span><Link to="">Chats</Link></span>
-                 <span><Link to="">Stats</Link></span>
-                 <span className='cursor-pointer' onClick={handleClick}>Logout</span>
-                </>
-            }
+    <header className="sticky top-0 z-50 w-full bg-white/90 shadow-md backdrop-blur border-b border-slate-100">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-3">
+        <Link to='/' className="flex items-center gap-2">
+          <img src={logo} className="w-28 h-14 rounded-lg shadow-sm border border-slate-200" alt="Pitch Venture Logo" />
+          <span className="text-xl font-bold text-green-700 tracking-tight hidden md:block">Pitch Venture</span>
+        </Link>
+        <div className="flex flex-row flex-wrap gap-6 md:gap-8 items-center font-medium text-slate-700">
+          {loginStatus === false && <>
+            <Link to="/" className="hover:text-green-700 transition-colors">Home</Link>
+            <Link to='/project_page' className="hover:text-green-700 transition-colors">About</Link>
+            <Link to="/project_search" className="hover:text-green-700 transition-colors">Projects</Link>
+            <Link to="/login" className="hover:text-green-700 transition-colors">Login</Link>
+            <Link to="/registration" className="hover:text-green-700 transition-colors">Register</Link>
+          </>}
+          {(loginStatus === true && currentUser.user_type === 'Investor') && <>
+            <Link to="/project_search" className="hover:text-green-700 transition-colors">Latest Startups</Link>
+            <Link to='/investment_portfolio' className="hover:text-green-700 transition-colors">Investment Portfolio</Link>
+            <Link to="" className="hover:text-green-700 transition-colors">Watchlist</Link>
+            <span className="cursor-pointer hover:text-red-600 transition-colors" onClick={handleClick}>Logout</span>
+            <Link to="investor_detail" className="hover:text-green-700 transition-colors">Profile</Link>
+          </>}
+          {(loginStatus === true && currentUser.user_type === 'startupFounder') && <>
+            <Link to="dashboard_founder" className="hover:text-green-700 transition-colors">Dashboard</Link>
+            <Link to='your_startups' className="hover:text-green-700 transition-colors">Your Startups</Link>
+            <Link to="" className="hover:text-green-700 transition-colors">Chats</Link>
+            <Link to="" className="hover:text-green-700 transition-colors">Stats</Link>
+            <span className="cursor-pointer hover:text-red-600 transition-colors" onClick={handleClick}>Logout</span>
+          </>}
         </div>
-    </div>
-    </div>
+      </nav>
+    </header>
   )
 }

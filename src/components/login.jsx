@@ -77,52 +77,48 @@ function Login() {
   };
 
   return (
-    <div className="py-10 w-[25rem] bg-white m-nav_space flex flex-col items-center gap-y-5 pt-6 shadow-md rounded-md font-roboto hover:shadow-2xl mt-14">
-      <div className="text-3xl font-bold text-center text-gray-800">Log in</div>
-      <input
-        className="w-2/3 h-12 border-2 text-center rounded-md"
-        placeholder="Username"
-        name="username"
-        onChange={handleData}
-      />
-
-      <div className="w-2/3 flex-col">
+    <div className=" flex items-center justify-center bg-gradient-to-br from-green-50 via-white to-lime-100 py-10 w-2/5 px-10">
+      <div className="w-full max-w-xl bg-white/90 shadow-2xl rounded-2xl px-10 py-12 flex flex-col items-center gap-6 font-roboto border border-green-200">
+        <div className="text-3xl font-extrabold text-center text-green-700 mb-2 tracking-tight">Log in</div>
         <input
-          className="w-full border-2 h-12 text-center rounded-md"
+          className="w-full h-12 border border-green-200 focus:ring-2 focus:ring-green-400 text-center rounded-lg text-base outline-none transition mb-2 bg-white/80 placeholder-gray-400"
+          placeholder="Username"
+          name="username"
+          onChange={handleData}
+        />
+        <input
+          className="w-full h-12 border border-green-200 focus:ring-2 focus:ring-green-400 text-center rounded-lg text-base outline-none transition mb-1 bg-white/80 placeholder-gray-400"
           placeholder="Password"
           name="password"
           type="password"
           onChange={handleData}
         />
-        <div className="text-sm text-left mt-2 text-blue-600">
-          <Link to="/forgot_pass">Forgot your password?</Link>
+        <div className="w-full flex justify-end mb-2">
+          <Link to="/forgot_pass" className="text-sm text-green-700 hover:underline">Forgot your password?</Link>
         </div>
+        <button
+          className="w-full bg-gradient-to-r from-green-500 to-lime-400 hover:from-green-600 hover:to-lime-500 text-white font-bold py-3 rounded-lg shadow transition duration-300 text-lg tracking-wide"
+          onClick={handleSubmit}
+        >
+          Log in
+        </button>
+        <div className="text-base mt-2 text-gray-700">
+          New to PitchVenture?{' '}
+          <Link to="/registration" className="text-green-700 font-semibold hover:underline">Sign Up</Link>
+        </div>
+        <ToastContainer 
+          className="toast-position"
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </div>
-      <button
-        className="w-2/3 bg-footer hover:bg-footer_blue text-white font-semibold py-3 rounded-md transition duration-300"
-        onClick={handleSubmit}
-      >
-        Log in
-      </button>
-
-      <div className="text-[1.2rem] mt-6">
-        New to PitchVenture?{" "}
-        <Link to="/registration" className="text-blue-800">
-          Sign Up
-        </Link>
-      </div>
-       <ToastContainer 
-                    className="toast-position"
-                    position="top-right"
-                    autoClose={2000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    />
     </div>
   );
 }

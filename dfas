@@ -1,0 +1,248 @@
+[33mcommit 11385983cb68a07b4f5f2c89354dfa4847cdaeb7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Fri Feb 14 01:56:53 2025 +0530
+
+    fixed state issue of errorMessage in login page using dipatching clearState function
+
+[33mcommit bd4b12fd9ebe40c04e2a3061ccdaac3acf0628c9[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Thu Feb 13 23:09:38 2025 +0530
+
+    fixed the rendering issue on founder listing page
+
+[33mcommit cc18a5bbfdf536bf615e84ff18c8fe891c2172d0[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Thu Feb 13 19:12:44 2025 +0530
+
+    added logic for redering multiple startups on investor page
+
+[33mcommit 60c2a86cfd1db77e82acdbcb16bc2eacae07679e[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Tue Feb 11 23:32:10 2025 +0530
+
+    chart added to investor
+
+[33mcommit 0ab219ecbd4e85b5b9ea12a4880f8c2d0a8aa897[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Feb 8 23:15:05 2025 +0530
+
+    added component for registering investor details
+
+[33mcommit ba5af31ea163e0dad257fc935dd56d46c242477b[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Fri Feb 7 17:18:51 2025 +0530
+
+    clearing the chart data upon logout and adding investment portfolio component
+
+[33mcommit c4023bb78b74b8aea2839c5d3f1d86d850ba217b[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Fri Feb 7 13:36:43 2025 +0530
+
+    added pie chart to display funding stats
+
+[33mcommit 862d828054795addeb94149719d46a98b99edcfe[m
+Author: Gaurav Singh <66405451+Gauravsingh123-aw@users.noreply.github.com>
+Date:   Thu Feb 6 10:57:12 2025 +0530
+
+    Delete package-lock.json
+
+[33mcommit 341703377e7c9da08885d3359c33f6d7d9e3e1ea[m
+Author: Gaurav Singh <66405451+Gauravsingh123-aw@users.noreply.github.com>
+Date:   Thu Feb 6 10:36:12 2025 +0530
+
+    Create vercel.json
+
+[33mcommit 5cfe50314be7147661da727740a42da86c2e713f[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Thu Feb 6 00:08:08 2025 +0530
+
+     added a pie chart to show funding progress with recharts
+
+[33mcommit 606694417d98ab3d26166290534fdffab66187f9[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Wed Feb 5 23:38:04 2025 +0530
+
+    added asyncthunkapi for startup detail.
+
+[33mcommit ce7fc771b3e94e297135520c47e9d7e48ee90fd1[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Wed Feb 5 18:09:25 2025 +0530
+
+     added dashboard and form for startup founder
+
+[33mcommit 1b1396442aafcc05757b821fab029fb87c8371ff[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Mon Feb 3 07:33:19 2025 +0530
+
+    added some navabar features
+
+[33mcommit d3c01a0d0bc3fac6e8a51eacf8b85fe8508efb21[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sun Feb 2 21:39:53 2025 +0530
+
+    added reduxjs/toolkit and thunkapi for async api call and state management
+
+[33mcommit 564481d3d27ff92fce926782e0c8dba21c27e1fe[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Feb 1 15:06:39 2025 +0530
+
+    handled async errors in reg and login page with api calls
+
+[33mcommit 0e8a35f988e9aaf0cfcba1fc7e530a2308ba6b04[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Feb 1 02:03:03 2025 +0530
+
+    some design changes to regis
+
+[33mcommit 58adef0e4eef6773da1e932f5c3d4fae37105580[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Fri Jan 31 17:00:32 2025 +0530
+
+    fixed autofill feature of login and registration component
+
+[33mcommit 52ee203e34951b439493cf18277a85c9646e33f7[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Wed Jan 29 18:18:15 2025 +0530
+
+     added new feature to project desc page
+
+[33mcommit ee4318bf32b6691f73374d46e8695ee327c5323c[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sun Jan 26 22:13:27 2025 +0530
+
+    added search_project component
+
+[33mcommit 511a9dd135265ade8d26bcef9225e3f1b429b23e[m
+Merge: 3759081 d37ec11
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Jan 25 15:36:46 2025 +0530
+
+    Merge branch 'gaurav'
+
+[33mcommit 37590810810c03365cc3a3e80bf76a4697ec0fc0[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Jan 25 13:49:40 2025 +0530
+
+    first commit
+
+[33mcommit d37ec1195f35db5236a22096606c6d12f0b4a0f4[m[33m ([m[1;31mupstream/gaurav[m[33m)[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Jan 25 13:35:45 2025 +0530
+
+    home_page_completed
+
+[33mcommit a7ddfcb841d11fc28467971592eb1e99a365a3dd[m[33m ([m[1;31mupstream/jyothik[m[33m, [m[1;31mupstream/develop[m[33m)[m
+Merge: 71b5410 fe9f4f3
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Fri Nov 1 20:03:01 2024 +0530
+
+    resolving conflicts in app.js
+
+[33mcommit 71b5410beb651cc63fa0d0a4138a10e628a56feb[m
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Fri Nov 1 20:01:04 2024 +0530
+
+    founder_details
+
+[33mcommit fe9f4f3e6c9cc872593b282ee98db1a2b11db0aa[m
+Merge: da445c3 29de56a
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Fri Nov 1 19:58:18 2024 +0530
+
+    Merge pull request #2 from Gauravsingh123-aw/develop
+    
+    Develop
+
+[33mcommit 29de56a92a8929326fcbe86528970e572ef14fb3[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Fri Nov 1 19:51:58 2024 +0530
+
+    changes in forms
+
+[33mcommit 792ce415bc2feaed30a80b92f93dcec98e419b0b[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Thu Oct 31 17:48:26 2024 +0530
+
+     add onChange handlers with debounce to form inputs
+
+[33mcommit a4049f8e6614d9759b0f1e67ad6427ac0d7981ce[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Thu Oct 31 16:08:42 2024 +0530
+
+    investor-form added
+
+[33mcommit f1c4d94c7188af46e3d8b6110c8ecf69928f3fe3[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Wed Oct 30 21:06:24 2024 +0530
+
+    adding debounce in login
+
+[33mcommit 1b50ee62f7f705b8cce4b79a94dd2c79452a168c[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Wed Oct 30 20:49:14 2024 +0530
+
+    lazy loading imports
+
+[33mcommit df41d75f60ed6b18162b3c07d4f6ee0f4a1ccc5e[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Tue Oct 29 00:29:36 2024 +0530
+
+    added registration page
+
+[33mcommit da445c3825a9d7e4a44f411e032f77bb172dca6f[m
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Tue Oct 29 00:12:34 2024 +0530
+
+    changes made in tailwind
+
+[33mcommit f04c9056e56d650100ef5c9b37cf049d754279b9[m
+Merge: 013bc52 285b944
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Tue Oct 29 00:01:07 2024 +0530
+
+    Merge branch 'develop' of github.com:JyothikSandeep/pitch-venture into jyothik
+
+[33mcommit 285b94402e354fb9f93e208a60b61da78b093348[m
+Merge: 7de8f31 a040164
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Mon Oct 28 23:53:58 2024 +0530
+
+    Merge pull request #1 from Gauravsingh123-aw/develop
+    
+    forgot_pass added css
+
+[33mcommit 013bc528c8be3d9aa49d6d8ac8c01111c728128f[m
+Merge: da56999 7de8f31
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Mon Oct 28 23:43:22 2024 +0530
+
+    adding confilcts
+
+[33mcommit da56999af2075e0053d86bfc09d601012ad81f83[m
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Mon Oct 28 23:27:08 2024 +0530
+
+    registration
+
+[33mcommit a040164b82ef7926797fd2caaa235ea56c25114d[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Mon Oct 28 20:41:40 2024 +0530
+
+    forgot_pass added css
+
+[33mcommit 7de8f3191ca71c7a0e46cf95bcef49c5c7ad19aa[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Oct 26 19:39:05 2024 +0530
+
+    login css
+
+[33mcommit ceda0f82bf64cf5bff4fca6aea2a75b33407362c[m
+Merge: 4aa0d0e 220c426
+Author: JyothikSandeep <101253647+JyothikSandeep@users.noreply.github.com>
+Date:   Sat Oct 26 12:36:25 2024 +0530
+
+    Merge branch 'develop' of github.com:JyothikSandeep/pitch-venture into jyothik
+
+[33mcommit 220c426593c8740e22fce4fc045fab29856be98d[m
+Author: Gaurav Singh <gauravsinghaw123@gmail.com>
+Date:   Sat Oct 
