@@ -5,5 +5,6 @@ export const reduxStore=configureStore({
     reducer:{
         userLogin:loginReducer,
         startupDetail:startupReducer
+      
     }
 })
